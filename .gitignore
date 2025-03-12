@@ -1,0 +1,15 @@
+*.dcu
+*.dpk
+*.dproj
+*.dpr
+*.res
+*.exe
+*.dll
+*.obj
+*.bak
+*.log
+
+/build/
+/output/
+/Win32/
+/Win64/
