@@ -1,7 +1,7 @@
-object frmProcessGenerateProfile: TfrmProcessGenerateProfile
+object frmProcessGenerateUser: TfrmProcessGenerateUser
   Left = 0
   Top = 0
-  Caption = 'frmProcessGenerateProfile'
+  Caption = 'Generate Random User'
   ClientHeight = 383
   ClientWidth = 761
   Color = clBtnFace
@@ -10,6 +10,7 @@ object frmProcessGenerateProfile: TfrmProcessGenerateProfile
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 15
   object Bevel1: TBevel
     Left = 96
@@ -183,11 +184,29 @@ object frmProcessGenerateProfile: TfrmProcessGenerateProfile
   object btnNewProfile: TButton
     Left = 144
     Top = 320
-    Width = 482
+    Width = 153
     Height = 25
-    Caption = 'Generate new profile'
+    Caption = 'Generate new User'
     TabOrder = 0
     OnClick = btnNewProfileClick
+  end
+  object btnFav: TButton
+    Left = 309
+    Top = 320
+    Width = 153
+    Height = 25
+    Caption = 'Favorite user'
+    TabOrder = 1
+    OnClick = btnFavClick
+  end
+  object btnNavFavorites: TButton
+    Left = 473
+    Top = 320
+    Width = 153
+    Height = 25
+    Caption = 'See all Favorite Users'
+    TabOrder = 2
+    OnClick = btnNavFavoritesClick
   end
   object RESTClient: TRESTClient
     Params = <>
@@ -211,5 +230,11 @@ object frmProcessGenerateProfile: TfrmProcessGenerateProfile
     UserAgent = 'Embarcadero URI Client/1.0'
     Left = 40
     Top = 256
+  end
+  object cdsFavUser: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 704
+    Top = 88
   end
 end
